@@ -3,7 +3,7 @@ workflows:
     name: BLE Test Peripheral Android Workflow
     environment:
       java: 11
-      android: stable
+      gradle: "-Dorg.gradle.daemon=false"
     scripts:
       - name: Install dependencies
         script: |
