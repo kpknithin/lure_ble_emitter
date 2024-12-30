@@ -2,8 +2,8 @@ workflows:
   android-workflow:
     name: BLE Test Peripheral Android Workflow
     environment:
-      android:
-        image: latest
+      java: 11
+      android: stable
     scripts:
       - name: Install dependencies
         script: |
@@ -16,8 +16,7 @@ workflows:
       app/build/outputs/apk/debug/*.apk
     publishing:
       email:
-        recipients:
-          "kavinithees2696@gmail.com"
+        - "kavinithees2696@gmail.com"
 
 
 
