@@ -12,13 +12,8 @@ workflows:
         script: |
          ./gradlew assembleDebug
     artifacts:
-      app/build/outputs/apk/debug/*.apk
+      - build/app/outputs/flutter-apk/app-release.apk # Android artifact
     publishing:
-      email:
-        - "kavinithees2696@gmail.com"
-
-
-
-
-
-
+      email:    
+        recipients:
+          - "kavinithees2696@gmail.com"
