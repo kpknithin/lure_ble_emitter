@@ -1,0 +1,26 @@
+workflows:
+  android-workflow:
+    name: BLE Test Peripheral Android Workflow
+    environment:
+      android:
+        image: latest
+    scripts:
+      - name: Install dependencies
+        script: |
+          chmod +x gradlew
+          ./gradlew dependencies
+      - name: Build APK
+        script: |
+         ./gradlew assembleDebug
+    artifacts:
+      app/build/outputs/apk/debug/*.apk
+    publishing:
+      email:
+        recipients:
+          "kavinithees2696@gmail.com"
+
+
+
+
+
+
