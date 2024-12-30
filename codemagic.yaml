@@ -3,7 +3,6 @@ workflows:
     name: BLE Test Peripheral Android Workflow
     environment:
       java: 11
-      GRADLE_OPTS: "-Dorg.gradle.daemon=false"
     scripts:
       - name: Install dependencies
         script: |
