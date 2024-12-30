@@ -5,9 +5,7 @@ workflows:
       java: 11
     scripts:
       - name: Install dependencies
-        script: |
-          chmod +x gradlew
-          ./gradlew dependencies
+        script: gradle clean build
       - name: Build APK
         script: |
          ./gradlew assembleDebug
